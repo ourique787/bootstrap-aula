@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santos FC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="bg-black text-white text-center p-5 ">
+    <h1>Ídolos do Santos</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> <!--Navbar-->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Início</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Ídolos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Galeria</a> <!--Menu dropdown com carrossel dentro-->
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="carrossel.html">Rei Pelé</a></li>
+              <li><a class="dropdown-item" href="carrosselney.html">Neymar</a></li>
+              <li><a class="dropdown-item" href="carrosselpepe.html">Pepe</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid border">
+
+
+<div class="offcanvas offcanvas-start" id="demo">  <!--Offcanvas com formulário, 4 elementos (nome, número, data, radio buttons, label, input, button.)-->
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title">Quem falta nessa lista de Ídolos?</h1>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <form action="/action_page.php">
+      <div class="mb-3 mt-3">
+        <label for="nome" class="form-label">Nome do Ídolo:</label>
+        <input type="name" class="form-control" id="nome" placeholder="Informe o nome" name="nome">
+      </div>
+      <div class="mb-3">
+        <label for="numero" class="form-label">Número da camisa:</label>
+        <input type="number" class="form-control" id="numero" placeholder="Número da camisa" name="camisa">
+      </div>
+      <div class="mb-3">
+        <label for="estreia" class="form-label">Ano de estreia:</label>
+        <input type="date" class="form-control" id="estreia" placeholder="Ano de estreia" name="estreia">
+      </div>
+      <div class="mb-3">
+        <label for="saida" class="form-label">Ano de saída:</label>
+        <input type="date" class="form-control" id="saida" placeholder="Ano de saída" name="saida">
+      </div>
+      <h6 style="font-weight: 400;">Posição:</h6>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Goleiro
+        <label class="form-check-label" for="radio1"></label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Defensor
+        <label class="form-check-label" for="radio2"></label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">Meio Campista
+        <label class="form-check-label" for="radio3"></label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option4">Atacante
+        <label class="form-check-label" for="radio3"></label>
+      </div>
+
+    
+      <button type="button" class="btn btn-dark mt-3">Enviar</button>
+    </form>
+
+    
+  </div>
+</div>
+
+<button class="btn btn-dark mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+  Cadastre seu Ídolo
+</button>
+
+    <section class="row">         <!--Cards com responsividade, mínimo 3 páginas e o Pagination está dentro das páginas do card-->
+      <div class="col-md-6 col-lg-4 p-3">
+        <div class="card ">
+          <img class="card-img-top w-75 mx-auto"
+            src="images/pele-nobg.png"
+            alt="Pelé">
+          <div class="card-body">
+            <h4 class="card-title">Rei Pelé</h4>
+            <p class="card-text">O maior jogador da história, com as maiores glórias do Santos</p>
+            <a href="reipele.html" class="bg-dark btn text-white">Ver mais</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 p-3">
+        <div class="card">
+          <img class="card-img-top w-75 mx-auto"
+            src="images/ney-nobg.png"
+            alt="Neymar">
+          <div class="card-body">
+            <h4 class="card-title">Neymar Junior</h4>
+            <p class="card-text">Futebol alegre que encantou a todos na década de 2010</p>
+            <a href="neymar.html" class="bg-dark btn text-white">Ver mais</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 p-3">
+        <div class="card">
+          <img class="card-img-top w-75 mx-auto"
+            src="images/pepe-nobg.png"
+            alt="Pepe">
+          <div class="card-body">
+            <h4 class="card-title">Pepe Canhão da Vila</h4>
+            <p class="card-text">Parceiro de Pelé em um dos melhores ataques da história</p>
+            <a href="pepecanhao.html" class="bg-dark btn text-white">Ver mais</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 p-3">
+        <div class="card">
+          <img class="card-img-top w-75 mx-auto"
+            src="images/coutinho-santastico-nobg.png"
+            alt="Coutinho">
+          <div class="card-body">
+            <h4 class="card-title">Coutinho</h4>
+            <p class="card-text">Terceiro maior artilheiro do Santos</p>
+            <a href="coutinho.html" class="bg-dark btn text-white">Ver mais</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 p-3">
+        <div class="card">
+          <img class="card-img-top w-75 mx-auto"
+            src="images/zito-nobg.png"
+            alt="Zito">
+          <div class="card-body">
+            <h4 class="card-title">Zito</h4>
+            <p class="card-text">Meio campista fundamental em um dos maiores times da história</p>
+            <a href="zito.html" class="bg-dark btn text-white">Ver mais</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 p-3">
+        <div class="card">
+          <img class="card-img-top w-75 mx-auto"
+            src="images/robinho-nobg.png"
+            alt="Robinho">
+          <div class="card-body">
+            <h4 class="card-title">Robinho</h4>
+            <p class="card-text">Rei das pedaladas e fundamental para o Brasileirão de 2002 e 2004</p>
+            <a href="robinho.html" class="bg-dark btn text-white">Ver mais</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="bg-black text-white text-center p-3">
+    <p>&copy; Desenvolvido por ADS</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
